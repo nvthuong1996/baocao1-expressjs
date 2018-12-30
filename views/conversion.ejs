@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html data-autoid="autoid_7">
+
+<head>
+    <title>Cuộc trò chuyện</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <link href="https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/O2aKM2iSbOw.png" rel="apple-touch-icon-precomposed" sizes="196x196">
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+    <link rel="stylesheet" type="text/css" data-bootloader-hash="HrMzG" href="https://static.xx.fbcdn.net/rsrc.php/v3/yN/l/0,cross/PUOK454f5Z5.css">
+    <link rel="stylesheet" type="text/css" data-bootloader-hash="uQJXe" href="https://static.xx.fbcdn.net/rsrc.php/v3/y6/l/0,cross/wb5UKhB3HtV.css">
+    <link rel="stylesheet" type="text/css" data-bootloader-hash="1hlls" href="https://static.xx.fbcdn.net/rsrc.php/v3/yQ/l/0,cross/pISB5CrjREq.css">
+    <link rel="stylesheet" type="text/css" data-bootloader-hash="KsXma" href="https://static.xx.fbcdn.net/rsrc.php/v3/y-/l/0,cross/jOXGpCWsz3m.css">
+    <script>
+        var CONVERSION_ID = -1;
+        var COUNT_NOTIFICATION = 0;
+        var USER = "B";
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/JS/chatControl.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/JS/socketControl.js"></script>
+    <script src="/messenger/sdk.js"></script>
+    <link rel="shortcut icon" href="/assets/message.ico" />
+
+</head>
+
+<body tabindex="0" class="touch x1 _fzu _50-3 acw portrait" data-store-id="38" style="background-color: rgb(255, 255, 255);">
+    <div id="viewport" data-store-id="37" style="overflow:visible">
+        <h1 style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0">Facebook</h1>
+        <div id="page" class="" data-store-id="36">
+            <div class="_129_" id="header-notices"></div>
+            <div class="_129- _6dr5">
+                <div class="_52z5 _451a _3qet _17gp" id="header" data-sigil="MTopBlueBarHeader">
+                <div class="_4g33 _52we" id="mJewelNav">
+                    <div class="_4g34">
+                        <div class="_59te jewel _hzb noCount <% if(type==1){ %> popoverOpen <%}%>" id="messages_jewel" data-sigil="nav-popover messages">
+                        <a accesskey="3" href="/conversion" class="_19no touchable" data-store="{&quot;behavior&quot;:&quot;custom&quot;}" id="u_0_c" data-sigil="icon" data-autoid="autoid_3" role="button" aria-haspopup="true" aria-controls="messages_flyout" aria-pressed="true">
+                            <span style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0">Tin nhắn</span>
+                            <div class="_2ftp _62ta">
+                                <div class="_59tf _2ftq">
+                                <span class="_59tg" data-sigil="count" id="count_notification">0</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="flyout popover_flyout" role="complementary" id="messages_flyout" data-sigil="flyout" aria-hidden="false" aria-expanded="true" data-autoid="autoid_4" style="min-height: 641px;">
+                            <div data-sigil="flyout-content context-layer-root">
+                                <header class="_52je _52jb _52jh _4g33 _52we _2pi8 _2pi4">
+                                <div class="_4g34">
+                                    <span data-sigil="messages_jewel_header_text">Tin nhắn</span>
+                                </div>
+                                <div class="_5s61">
+                                    <a class="button touchable no-outline" role="button" href="/conversion/new" aria-label="Soạn tin nhắn" rel="dialog" data-store="{&quot;dialogURI&quot;:&quot;\/messages\/compose\/dialog\/&quot;}" id="u_0_d" data-sigil="dialog-link">
+                                    <span class="_5r0s _5r0v img">
+                                    <i class="_5r0t _4q9b img sp_gKGNl373u0J sx_fefb31"></i>
+                                    <i class="_5r0u _4q9b img sp_gKGNl373u0J sx_fc88e1"></i>
+                                    </span>
+                                    </a>
+                                </div>
+                                </header>
+                                <ol class="_7k7 inner" data-sigil="contents">
+                                <li class="acw" id="u_6_1" data-sigil="live-threads marea"></li>
+                                <li class="acw" data-sigil="marea">
+                                    <div data-sigil="mJewelMsgThreadContents"></div>
+                                </li>
+
+
+                                
+
+                                <% for(var item of conversions){ %>
+                                    <% if(item.is_reader){ %>
+                                        <li class="item messages-flyout-item acw abt" id="msg_other_user_fbid_723216317888203" data-sigil="marea">
+                                            <a class="touchable primary" href="/conversion/<%= item.id %>" data-sigil="touchable">
+                                                <div class="primarywrap">
+                                                    <div class="image">
+                                                    <i class="img profpic" aria-label="<%= item.name_conversion %>" role="img" style="background:#d8dce6 url('<%= item.avatar %>') no-repeat center;background-size:100% 100%;-webkit-background-size:100% 100%;width:43px;height:43px;" data-sigil="profile_image"></i>
+                                                    </div>
+                                                    <div class="content">
+                                                    <div class="lr">
+                                                        <div class="time r nowrap mfss fcl">
+                                                            <abbr data-sigil="timestamp" data-store-id="39"></abbr>
+                                                        </div>
+                                                        <div class="title thread-title mfsl fcb">
+                                                            <strong><%= item.name_conversion %></strong>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="oneLine preview mfss fcg">
+                                                        <i class="touched_hide messageicons img sp_XHFAcEMpcqj sx_ec6918" data-sigil="attachment-icon" style="display:none"></i>
+                                                        <i class="messageicons touched_show img sp_XHFAcEMpcqj sx_014aad" data-sigil="attachment-icon" style="display:none"></i>
+                                                        <span class="snippet ellipsis"><%= item.latestMessage %></span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <% }else{ %>
+                                        <li class="item messages-flyout-item aclb abt" id="msg_other_user_fbid_723216317888203" data-sigil="marea">
+                                            <a class="touchable primary" href="/conversion/<%= item.id %>" data-sigil="touchable">
+                                                <div class="primarywrap">
+                                                    <div class="image">
+                                                    <i class="img profpic" aria-label="<%= item.name_conversion %>" role="img" style="background:#d8dce6 url('<%= item.avatar %>') no-repeat center;background-size:100% 100%;-webkit-background-size:100% 100%;width:43px;height:43px;" data-sigil="profile_image"></i>
+                                                    </div>
+                                                    <div class="content">
+                                                    <div class="lr">
+                                                        <div class="time r nowrap mfss fcl">
+                                                            <abbr data-sigil="timestamp" data-store-id="39"></abbr>
+                                                        </div>
+                                                        <div class="title thread-title mfsl fcb">
+                                                            <strong><%= item.name_conversion %></strong>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="oneLine preview mfss fcg">
+                                                        <i class="touched_hide messageicons img sp_XHFAcEMpcqj sx_ec6918" data-sigil="attachment-icon" style="display:none"></i>
+                                                        <i class="messageicons touched_show img sp_XHFAcEMpcqj sx_014aad" data-sigil="attachment-icon" style="display:none"></i>
+                                                        <span class="snippet ellipsis"><%= item.latestMessage %></span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <% } %>
+                                <% } %>
+
+
+
+                                <li class="item more acw abt" data-sigil="marea">
+                                    <a class="touchable primary" href="#" data-sigil="touchable">
+                                        <div class="primarywrap">
+                                            <div class="content">
+                                            <div class="title mfsm fcl">
+                                                <strong>Xem tất cả tin nhắn</strong>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                </ol>
+                            </div>
+                            <div class="_imu"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="_4g34">
+                        <div class="_59te jewel _hzb noCount <% if(type==2){ %> popoverOpen <%}%>" id="requests_jewel" data-sigil="nav-popover requests">
+                        <a href="/conversion/group" accesskey="2" class="_19no touchable" data-store="{&quot;behavior&quot;:&quot;custom&quot;}" id="u_0_a" data-sigil="icon" data-autoid="autoid_1" role="button" aria-haspopup="true" aria-controls="reqs_flyout" aria-pressed="false">
+                            <span style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0">LỜI MỜI KẾT BẠN</span>
+                            <div class="_2ftp _62ta">
+                                <div class="_59tf _2ftq">
+                                <span class="_59tg" data-sigil="count" id="gorupNotifycation">0</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="flyout popover_hidden popover_flyout" role="complementary" id="reqs_flyout" data-sigil="flyout flyout" aria-hidden="true" aria-expanded="false" data-autoid="autoid_2">
+                            <div data-sigil="flyout-content context-layer-root">
+                                <header class="_52jh _4g33 _52we _5lm6" data-sigil="header">
+                                <div class="_4g34">LỜI MỜI KẾT BẠN</div>
+                                <div class="_5s61">
+                                    <a class="button touchable no-outline" role="button" href="/findfriends/browser/?fb_ref=jwl&amp;refid=11" aria-label="Tìm bạn bè" id="u_0_b">
+                                    <i class="img sp_gKGNl373u0J sx_56b5b9"></i>
+                                    </a>
+                                </div>
+                                </header>
+                                <ol class="_7k7 inner" id="mJewelRequestsFlyoutBody" data-sigil="contents requests-flyout-loading">
+                                <li class="acw apl" data-sigil="marea">
+                                    <div style="text-align:center;">
+                                        <div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_5" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                                    </div>
+                                </li>
+                                </ol>
+                            </div>
+                            <div class="_imu"></div>
+                        </div>
+                    </div>
+                    </div>
+             </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

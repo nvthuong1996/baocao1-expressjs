@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/controller/index.js"],"names":["conversionController"],"mappings":";;;;;;;AAAA;;;;;;QAKIA,oB,GAAAA,8B","file":"index.js","sourcesContent":["import conversionController from \"./conversionController\";\r\n\r\n\r\n\r\nexport {\r\n    conversionController\r\n}"]}

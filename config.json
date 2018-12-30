@@ -1,0 +1,15 @@
+{
+  "database": {
+  	"database":"ptit_chat",
+    "username": "nvthuong",
+    "password": "Khatvong96",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "messengerconfig":{
+    "PAGE_ACCESS_TOKEN":"EAADVq3YUqwABAJPODny6KFeKDLLLZBhGbuwqPOZBSyTMkGc7ECbBjbpJGgiI4gaeqzz8OaAQqcZAZCwzstoQQlAGHVpcqxTObNjgn8qXlSjDF2A2vCOblrDnPKQ9eSpxJm7AwEBgweoeZBZAihjEZBKeFclSqt1DnB4noWZB4rrDugZDZD",
+    "WEBHOOK_TOKEN":"thuongnguyenvan",
+    "SERVER_URL":"https://dev.ptit.info"
+  }
+
+}

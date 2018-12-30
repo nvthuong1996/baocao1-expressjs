@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+	Hệ thống tra cứu, hỗ trợ giám sát chất lượng BCCP
+</title><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="icon" href="favicon.ico" type="image/ico" />
+     <!-- Global CSS -->
+    <link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/master.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/Menu.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/topnav.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/body.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/tier2-page.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/sticky-footer.css" /><link rel="Stylesheet" type="text/css" media="all" href="/App_Themes/Default/Styles/campaign.master.css" />
+    <!--work when deploy-->
+    <link href="App_Themes/Default/Styles/body.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/campaign.master.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/ie7.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/master.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/Menu.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/sticky-footer.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/tier2-page.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/topnav.css" rel="stylesheet" type="text/css" /><link href="App_Themes/Default/Styles/mymenu.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		#vnpNav a {
+			display: block;
+			text-decoration: none;
+			font-size: 13px;
+			font-family: "Arial";
+			color: #f2f2f2;
+			padding: 10px 18px;
+			
+		}
+
+		#vnpNav li:hover > a {
+			color: white;
+			background-color: #0059b3;
+		}
+
+		#vnpNav > li > a {font-weight: bold;}
+
+		#vnpNav, #vnpNav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			background-color: #00458A;
+		}
+
+		#vnpNav > li {display: inline-block;}
+
+		#vnpNav li li {width: 200px;}
+		
+		#vnpNav li li li {width: 250px;}
+
+		#vnpNav li {position: relative; margin: 0;}
+
+		#vnpNav ul {
+			position: absolute;
+			border: 1px solid white;
+			left: 0;
+		}
+		
+		#vnpNav ul ul {
+			top: 0;
+			left: 200px;
+		}
+
+		#vnpNav li ul,
+		#vnpNav li:hover li ul {display: none;}
+
+		#vnpNav li:hover ul,
+		#vnpNav li li:hover ul {display: block;}
+	</style>
+    <script src="App_Themes/Default/Scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/App_Themes/Default/Scripts/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript" src="/App_Themes/Default/Scripts/jquery.query-2.1.6.js"></script>
+
+    <script type="text/javascript" src="/App_Themes/Default/Scripts/broker.js"></script>
+
+    <script type="text/javascript" src="/App_Themes/Default/Scripts/azure.js"></script>   
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2101276-13']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+
+
+
+    
+</head>
+<body>
+    <form method="post" action="./Login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MjYwNjQ1NDEPZBYCZg9kFgICAw9kFgICCQ8PFgIeBFRleHQFUFhpbiBt4budaSA8Zm9udCBjb2xvcj0ncmVkJz48Yj48YSBocmVmPSdMb2dpbi5hc3B4Jz7EkMSDbmcgbmjhuq1wPC9hPjwvYj48L2ZvbnQ+ZGRk4zoe6OxLTMTo7wDoyHKDB44TbY+N+MzX6YCcYXJejjQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=hviNJA6YuErvPfaLMqGx4KXsp-6ySBUisJ-ZoWoAP4xBRN8Q2qYBXsREUQExyhwGG5Lcx4OHs2ByphDJXHQrwhJU57kjW6L0n_quC6W6NcY1&amp;t=636477512660000000" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=3v260yf27Zv5iB3_5P4nvobssYlvYk2Ur_uKNylEvGXCy5zUEcepcCep5NkFTDAC_OozctW9FH2klyMRRa30rZOT-27yXbQJF-cFXMXbWgI1&amp;t=636477512660000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAARNeWRfPMNq1ZkI6K+IBU5H5Zken35TfMCr1CBdFx6iImtQgWy8LYWWoXaMcnwFH0uoIatKanHO+uhiF/QUpC21DzLVHrcqdkP4MjlQmZEbFbvP0TsfVSM2SGxMt12Jr2w=" />
+</div>
+    
+    <a name="top"></a>
+    <div id="outerWrapper">
+        <div id="wrapper" class="landingPage getStartedPage">
+            <div id="whiteBkgdStrip">
+            </div>
+            <div class="header">
+                <div class="mainHomepageTitle">
+                    <a href="http://vnpost.vn" target="_blank"><img src="App_Themes/Default/Images/logo/logo.jpg" alt="Tổng Công ty Bưu điện Việt Nam"/></a>
+                    
+                </div>
+                <ul id="vnpNav">
+		            <li><a href="Default.aspx?act=Home">Trang chủ</a>
+			        </li>
+		            <li id="subMnuBCCP"><a href="Default.aspx#">Hỗ trợ mạng lưới</a>
+			            <ul>
+                        <li><a href='#'>Định vị</a>
+					        <ul>
+                               <li id="Li15"><a href="BCCP.aspx?act=Trace">Định vị bưu gửi đơn lẻ, lô, BĐ8, BĐ10</a></li>
+				               <li id="mnuMultiTrace"><a href="BCCP.aspx?act=MultiTrace">Định vị bưu gửi theo danh sách</a></li>
+                               <li id="mnuMultiE"><a href="BCCP.aspx?act=MultiE">Định vị bưu gửi EMS theo danh sách (dữ liệu cũ trên EMS-En)</a></li>
+                            </ul>
+                        
+				        </li>
+                        <li><a href='#'>Khai thác</a>
+					     <ul>
+				            <li id="mnuTKCT_BCCP"><a href="BCCP.aspx?act=MailTrip">Theo dõi chuyến thư đi/đến</a></li>
+                           <li id="mnuTKBD10_BCCP"><a href="BCCP.aspx?act=BD10">Theo dõi BĐ10 đi/đến</a></li>
+                           <li id="mnuTKCT_EMS"><a href="BCCP.aspx?act=EMailTrip">Theo dõi chuyến thư đi/đến tại EMS</a></li>
+                           <li id="mnuTKBD10_EMS"><a href="BCCP.aspx?act=EBD10">Theo dõi BĐ10 đi/đến tại EMS</a></li>
+                           <li id="mnuTDCT"><a href="BCCP.aspx?act=MailtripStatistic">Theo dõi chuyến thư tồn chưa truyền</a></li>
+			            </ul>
+                        </li>
+                        <li><a href='#'>Danh mục</a>
+					        <ul>
+                               <li id="mnuListPO"><a href="BCCP.aspx?act=ListPO">Danh mục bưu cục theo đơn vị quản lý</a></li>
+                               <li id="mnuPostman"><a href="BCCP.aspx?act=Postman">Danh bạ tuyến phát</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+		            </li>
+                    <li id="subMnuCL"><a href="Default.aspx#">Chất lượng</a>
+                    <ul>
+				            <li><a href='#'>Chất lượng phát</a>
+					            <ul>
+						            <li id="mnuTKCLP_TinhTP"><a href="BCCP.aspx?act=ProvinceDelivery">Thống kê CL báo phát Tỉnh/TP</a></li>
+                                    <li id="mnuTKP_BCCP"><a href="BCCP.aspx?act=Delivery">Thống kê CL báo phát Bưu cục phát</a></li>
+                                    <li id="Li6"><a href="BCCP.aspx?act=ProvinceCOD">Thống kê CL nộp tiền COD Tỉnh/TP</a></li>
+                                    <li id="Li13"><a href="BCCP.aspx?act=DeliveryCOD">Thống kê CL nộp tiền COD Bưu cục</a></li>
+					            </ul>
+				            </li>
+				            <li id="subMnuPUD"><a href='#'>Chất lượng quốc tế</a>
+					            <ul>
+						            <li id="mnuEDI"><a href="BCCP.aspx?act=EDI">Thống kê dữ liệu truyền EDI hiện tại</a></li>
+                                    <li id="mnuREDI"><a href="BCCP.aspx?act=REDI">Thống kê dữ liệu khai thác EDI thực tế</a></li>
+                                    <li id="mnuDE"><a href="BCCP.aspx?act=EventQuality">Đánh giá chất lượng OE</a></li>
+                                    <li id="mnuBSD"><a href="BCCP.aspx?act=BSD">Thống kê chất lượng BSD - BSD Quality</a></li>
+                                    <li id="Li14"><a href="BCCP.aspx?act=IIG">Báo cáo đi/đến</a></li>
+                                    
+					            </ul>
+				            </li>
+                           
+                            <li><a href='#'>Chất lượng DHL</a>
+					            <ul>
+						            <li id="Li1"><a href="PUD.aspx?act=ProvinceQuality">Thống kê CL phát DHL Tỉnh/TP</a></li>
+                                    <li id="Li2"><a href="PUD.aspx?act=POQuality">Thống kê CL phát DHL Bưu cục phát</a></li>
+                                    <li id="Li10"><a href="PUD.aspx?act=Delivery">Thống kê tỷ lệ báo phát DHL</a></li>
+					            </ul>
+				            </li>
+			            </ul>
+		            </li>
+                    <li id="submnuSLP"><a href="Default.aspx#">Sản lượng phát</a>
+                    <ul>
+				            <li><a href='#'>Thống kê công phát</a>
+					            <ul>
+						            <li id="Li8"><a href="BCCP.aspx?act=PODelivery">Sản lượng công phát theo dịch vụ - Bưu cục</a></li>
+                                    <li id="Li4"><a href="BCCP.aspx?act=PostmanDelivery">Sản lượng công phát theo dịch vụ - Bưu tá, Tuyến phát</a></li>
+                                    <li id="Li5"><a href="BCCP.aspx?act=DeliveryPriceData">Sản lượng công phát theo kết quả phát</a></li>
+                                    <li id="Li9"><a href="BCCP.aspx?act=DeliveryPrice">Đơn giá công phát theo kết quả phát</a></li>
+					            </ul>
+				            </li>
+				            <li><a href='#'>Phân chia doanh thu</a>
+					            <ul>
+						            <li id="Li11"><a href="BCCP.aspx?act=RevenueSharing">Thống kê phân chia doanh thu chiều đến</a></li>
+					            </ul>
+				            </li>
+                            
+			            </ul>
+		            </li>
+                    <li id="subMnuSupport"><a href="Default.aspx#">Liên kết</a>
+                    <ul>
+                        <li id="Li16"><a href="http://vnpost.vn" target="_blank">Portal VietnamPost</a></li>
+                        <li id="mnuKHL"><a href="http://khl.vnpost.vn" target="_blank">Hệ thống hỗ trợ khách hàng lớn</a></li>
+                        <li id="Li17"><a href="http://dtkn.vnpost.vn" target="_blank">Hệ thống điều tra khiếu nại</a></li>
+					    <li id="Li18"><a href="http://mail.vnpost.vn" target="_blank">Hệ thống thư điện tử VNPost</a></li>
+                    </ul>
+		            </li>
+	            </ul>
+                
+                <div class="mainHomepageUserLogin">
+                <span id="lblUser">Xin mời <font color='red'><b><a href='Login.aspx'>Đăng nhập</a></b></font></span>
+                </div>
+                
+                <br />
+                <br />
+                <br />
+                <table cellpadding="0" cellspacing="0" width="100%" style="border-left-style:none;border-right-style:none;border-bottom-style:none">
+                <tr>
+                <td>
+                
+    <center>
+    
+<table width="600px" border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td colspan="2" align="center"><h2>ĐĂNG NHẬP HỆ THỐNG</h2></td>
+
+</tr>
+<tr>
+<td style="padding:10px";>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="right" class="text_input">Tên đăng nhập&nbsp;&nbsp;&nbsp;</td>
+<td align="left" class="text_input" width="55%"><input name="ctl00$MainContent$txtUser" type="text" id="MainContent_txtUser" class="txt_input" style="width:150px;" />
+<span id="MainContent_RequiredFieldValidator1" style="visibility:hidden;">*</span>
+</td>
+
+</tr>
+<tr>
+<td align="right" class="text_input" width="45%" >Mật khẩu&nbsp;&nbsp;&nbsp;</td>
+<td align="left" class="text_input" width="55%"><input name="ctl00$MainContent$txtPassword" type="password" id="MainContent_txtPassword" class="txt_input" style="width:150px;" />
+<span id="MainContent_RequiredFieldValidator2" style="visibility:hidden;">*</span>
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2" align="center"><span id="MainContent_lblAlert" style="color:Red;font-weight:bold;"></span><br /></td>
+
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" name="ctl00$MainContent$btnLogin" value="Đăng nhập" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnLogin" class="buttonSearchStyle" style="border-color:White;border-style:None;" /></td>
+</tr>
+
+        
+
+</table>
+</td>
+</tr>
+
+</table>
+
+
+</center>
+
+                <br />
+                </td>
+                </tr>
+                </table>
+                
+            </div>
+            <!--contentWarpper -->
+            
+        </div>
+    </div>
+    <div class="footer">
+         <div class="microsoftLink">
+            <a href="http://www.vnpost.vn/" title="IT Div.,VNPost">
+                2012  &copy; IT Division, Vietnam Post</a>
+            
+        </div>
+        <div class="leftSideLinks">
+            <span>Hệ thống tra cứu, hỗ trợ giám sát chất lượng BCCP</span>
+        </div>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_RequiredFieldValidator1"), document.getElementById("MainContent_RequiredFieldValidator2"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var MainContent_RequiredFieldValidator1 = document.all ? document.all["MainContent_RequiredFieldValidator1"] : document.getElementById("MainContent_RequiredFieldValidator1");
+MainContent_RequiredFieldValidator1.controltovalidate = "MainContent_txtUser";
+MainContent_RequiredFieldValidator1.errormessage = "*";
+MainContent_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_RequiredFieldValidator1.initialvalue = "";
+var MainContent_RequiredFieldValidator2 = document.all ? document.all["MainContent_RequiredFieldValidator2"] : document.getElementById("MainContent_RequiredFieldValidator2");
+MainContent_RequiredFieldValidator2.controltovalidate = "MainContent_txtPassword";
+MainContent_RequiredFieldValidator2.errormessage = "*";
+MainContent_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_RequiredFieldValidator2.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+</body>
+</html>
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'ADDELIKJPJAIHPDBKNGOMOGHHLEIJHLEDEIAAHEMFLBEPGAJHJIADBAICJGIHNLBLEPEMKNLINABKKMHGAADPHKFCKPAMHLEIBDPMHMAHEOKDJGFCMFPHHIKBFKPKFJE',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,48,(latency>>8));str=f5_cspm.set_byte(str,49,(latency&0xff));str=f5_cspm.set_byte(str,43,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0573879511aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>
